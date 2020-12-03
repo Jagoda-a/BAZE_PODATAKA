@@ -1,7 +1,8 @@
 import sys
 from PySide2 import QtWidgets, QtGui, QtCore
 from PySide2.QtGui import QIcon, Qt
-
+from structure_dock import StructureDock
+from workspace import WorkspaceWidget
 
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
@@ -15,12 +16,14 @@ class MainWindow(QtWidgets.QMainWindow):
         
         
         
+        
 
         self.create_menu()
 
 
-
+        
         self.main_window.show()
+        
 
     def create_menu(self):
         self.menu_bar=QtWidgets.QMenuBar(self.main_window)
@@ -92,3 +95,34 @@ class MainWindow(QtWidgets.QMainWindow):
         self.menu_bar.addMenu(help_menu)
 
         self.main_window.setMenuBar(self.menu_bar)
+        
+        #STRUCTURE DOCK
+        structure_dock=StructureDock("Strukture dokumenta", self.main_window)
+
+        
+
+
+        #CENTRALNI VIDZET
+        central_widget=QtWidgets.QTabWidget(self.main_window)
+        #self.setCentralWidget(central_widget)
+
+
+        #WORKSPACE
+        workspace=WorkspaceWidget(central_widget)
+        central_widget.addTab(workspace,QtGui.QIcon("picture/tabela.png"), "Prikaz tabele")
+
+        def read_file(index):
+            path=structure_dock.model.filePath(index)
+            with open(path) as f:
+                text=(f.read())
+                new_workspace=WorkspaceWidget(central_widget)
+                central_widget.addTab(new_workspace, path.split("/")[-1])
+                new_workspace.show_text(text)
+
+        structure_dock.tree.clicked.connect(read_file)
+        self.main_window.setCentralWidget(central_widget)
+        self.main_window.addDockWidget(QtCore.Qt.LeftDockWidgetArea, structure_dock)
+
+        
+
+    
