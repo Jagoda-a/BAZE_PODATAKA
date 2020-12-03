@@ -15,10 +15,10 @@ class WorkspaceWidget(QtWidgets.QWidget):
 
 
 
-    def show_tabs(self):
-        self.tab_widget.addTab(QtWidgets.QTextEdit(self.tab_widget), QtGui.QIcon("picture/tabela.png"), "Prva Podtabela")
+     def show_tabs(self):
+         self.tab_widget.addTab(QtWidgets.QTextEdit(self.tab_widget), QtGui.QIcon("picture/tabela.png"), "Prva Podtabela")
 
-        self.tab_widget.addTab(QtWidgets.QTextEdit(self.tab_widget), QtGui.QIcon("picture/tabela.png"), "Druga Podtabela")
+         self.tab_widget.addTab(QtWidgets.QTextEdit(self.tab_widget), QtGui.QIcon("picture/tabela.png"), "Druga Podtabela")
 
     def create_tab_widget(self):
         self.tab_widget = QtWidgets.QTabWidget(self)
