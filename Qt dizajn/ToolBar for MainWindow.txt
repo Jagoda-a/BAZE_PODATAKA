@@ -1,0 +1,27 @@
+def __init__(self):
+        super(Example, self).__init__()
+        
+        self.initUI()
+        
+    def initUI(self):               
+        
+        textEdit = QtGui.QTextEdit()
+        self.setCentralWidget(textEdit)
+
+        exitAction = QtGui.QAction('Exit', self)
+        exitAction.setShortcut('Ctrl+Q')
+        exitAction.setStatusTip('Exit application')
+        exitAction.triggered.connect(self.close)
+
+        self.statusBar()
+
+        menubar = self.menuBar()
+        fileMenu = menubar.addMenu('&File')    ///  ### OVAJ DEO JE BITAN ZA UBACIVANJE TOOL IKONICA U TOOL BAR
+        fileMenu.addAction(exitAction) 	         ZOVI ME AKO TI NIJE JASNO, JA SAM LAGANO UBACIO U SVOJ MAIN.PY!!!
+					AJMO BURA DA ISPEGLAMO OVO BRE! ###///
+        toolbar = self.addToolBar('Exit')
+        toolbar.addAction(exitAction)
+        
+        self.setGeometry(300, 300, 350, 250)
+        self.setWindowTitle('Main window')    
+        self.show()
