@@ -3,6 +3,7 @@ from PySide2 import QtWidgets, QtGui, QtCore
 from PySide2.QtGui import QIcon, Qt
 from structure_dock import StructureDock
 from workspace import WorkspaceWidget
+from workspace import *
 
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
@@ -12,7 +13,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.main_window.setWindowTitle("RJP BASE")
         self.main_window.resize(880, 580)
         self.main_window.setWindowIcon(QIcon("RJP.png"))
-        self.main_window.setStyleSheet('background-color:orange')
+        self.main_window.setStyleSheet('background-color:#222; color: #FFF')
         
         
         
@@ -32,23 +33,23 @@ class MainWindow(QtWidgets.QMainWindow):
         file_menu=QtWidgets.QMenu("File", self.menu_bar)
         self.menu_bar.addMenu(file_menu)
 
-        new_action=QtWidgets.QAction(QIcon("RJP.png"), "New File", self)
+        new_action=QtWidgets.QAction(QIcon("./picture/new_file.png"), "New File", self)
         new_action.setShortcut('Ctrl+N')
 
 
-        open_action=QtWidgets.QAction(QIcon("RJP.png"), "Open File", self)
+        open_action=QtWidgets.QAction(QIcon("./picture/openfile.png"), "Open File", self)
         open_action.setShortcut('Ctrl+O')
 
-        open_folder=QtWidgets.QAction(QIcon("RJP.png"), "Open Folder", self)
+        open_folder=QtWidgets.QAction(QIcon("./picture/open.png"), "Open Folder", self)
         open_folder.setShortcut('Ctrl+K+O')
 
-        save_action=QtWidgets.QAction(QIcon('RJP.png'), "Save", self)
+        save_action=QtWidgets.QAction(QIcon('./picture/save.png'), "Save", self)
         save_action.setShortcut('Ctrl+S')
 
-        print_action=QtWidgets.QAction("Print",self)
+        print_action=QtWidgets.QAction(QIcon('./picture/pp.png'),"Print",self)
         print_action.setShortcut('Ctrl+P')
 
-        exit_action=QtWidgets.QAction(QIcon('RJP.png'), "Exit", self)
+        exit_action=QtWidgets.QAction(QIcon('./picture/xx.png'), "Exit", self)
 
         file_menu.addAction(new_action)
         file_menu.addAction(open_action)
@@ -103,8 +104,19 @@ class MainWindow(QtWidgets.QMainWindow):
 
 
         #CENTRALNI VIDZET
+        
         central_widget=QtWidgets.QTabWidget(self.main_window)
-        #self.setCentralWidget(central_widget)
+        central_widget.setStyleSheet('backg')
+        central_widget.setTabsClosable(True)
+
+        def delete_tab(index):
+            central_widget.removeTab(index)
+        central_widget.tabCloseRequested.connect(delete_tab)
+        
+        
+
+
+        
 
 
         #WORKSPACE
