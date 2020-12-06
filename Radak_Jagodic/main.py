@@ -25,6 +25,7 @@ if __name__ == "__main__":
     main_window.resize(700, 500)
     # Izgled prozora
     main_window.setWindowTitle("Editor generickih podataka")
+    main_window.setStyleSheet("background-color:yellow")
     icon = QtGui.QIcon("picture/icons8-edit-file-64.png")
     main_window.setWindowIcon(icon)
 
@@ -55,15 +56,27 @@ if __name__ == "__main__":
     menu_bar.addMenu(help_menu)
     menu_bar.addMenu(open_menu)
 
+    #ToolBar
     tool_bar = QtWidgets.QToolBar(main_window)
+    t1 = QtGui.QIcon("picture/diplay.png")
+    tool_bar.addAction(t1, "Display")
+    t2 = QtGui.QIcon("picture/poruka.png")
+    tool_bar.addAction(t2, "Inbox")
+    t3 = QtGui.QIcon("picture/telefon.png")
+    tool_bar.addAction(t3, "Call")
+    t4 = QtGui.QIcon("picture/wifi.png")
+    tool_bar.addAction(t4, "Wi-fi")
+    
 
 
+    #WorkspaceWidget
     central_widget = QtWidgets.QTabWidget(main_window)
     text_edit = QtWidgets.QTextEdit(central_widget)
     central_widget.addTab(text_edit, QtGui.QIcon("picture/textedit.png"), "Tekstualni editor")
     # workspace = WorkspaceWidget(central_widget)
     # central_widget.addTab(workspace,QtGui.QIcon("picture/tabela.png"), "Prikaz tabele")
     central_widget.tabCloseRequested.connect(delete_tab) #Brisanje taba
+    
     
     # structure_dock = QtWidgets.QDockWidget("Strukture dokumenata", main_window)
     structure_dock = StructureDock("Strukture dokumenata", main_window)
@@ -85,6 +98,7 @@ if __name__ == "__main__":
     main_window.addDockWidget(QtCore.Qt.LeftDockWidgetArea, structure_dock)
     main_window.setCentralWidget(central_widget)
     main_window.setStatusBar(status_bar)
+    # menu_bar.setParent(main_window)
 
     # Kraj
     main_window.show()

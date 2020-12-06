@@ -12,9 +12,7 @@ class WorkspaceWidget(QtWidgets.QWidget):
 
         self.main_layout.addWidget(self.tab_widget)
         self.setLayout(self.main_layout)
-
-
-
+        
     def show_tabs(self):
         self.tab_widget.addTab(QtWidgets.QTextEdit(self.tab_widget), QtGui.QIcon("picture/tabela.png"), "Prva Podtabela")
 
