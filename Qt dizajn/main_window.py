@@ -13,7 +13,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.main_window.setWindowTitle("RJP BASE")
         self.main_window.resize(880, 580)
         self.main_window.setWindowIcon(QIcon("RJP.png"))
-        self.main_window.setStyleSheet('background-color:#222; color: #FFF')
+        self.main_window.setStyleSheet('background-color:#222; color:grey')
         
         
         
@@ -99,6 +99,7 @@ class MainWindow(QtWidgets.QMainWindow):
         
         #STRUCTURE DOCK
         structure_dock=StructureDock("Strukture dokumenta", self.main_window)
+        structure_dock.setStyleSheet("color:white")
 
         
 
@@ -122,6 +123,7 @@ class MainWindow(QtWidgets.QMainWindow):
         #WORKSPACE
         workspace=WorkspaceWidget(central_widget)
         central_widget.addTab(workspace,QtGui.QIcon("picture/tabela.png"), "Prikaz tabele")
+        central_widget.setStyleSheet("color:black")
 
         def read_file(index):
             path=structure_dock.model.filePath(index)
