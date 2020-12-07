@@ -1,6 +1,6 @@
 import sys
 from PySide2 import QtWidgets, QtGui, QtCore
-from PySide2.QtGui import QIcon, Qt
+from PySide2.QtGui import *
 from structure_dock import StructureDock
 from workspace import WorkspaceWidget
 from workspace import *
