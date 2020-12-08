@@ -31,7 +31,6 @@ if __name__ == "__main__":
     main_window.resize(700, 600)
     # Izgled prozora
     main_window.setWindowTitle("Informacioni resursi prodaje")
-    main_window.setStyleSheet("background-color:yellow")
     icon = QtGui.QIcon("picture/icons8-edit-file-64.png")
     main_window.setWindowIcon(icon)
 
