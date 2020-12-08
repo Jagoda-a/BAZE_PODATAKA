@@ -5,7 +5,6 @@ class OtkazanaRobaModel(QtCore.QAbstractTableModel):
         super().__init__(parent)
         self.otkazano = []
         
-
     def get_element(self, index):
         return self.otkazano[index.row()]
 

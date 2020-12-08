@@ -15,7 +15,7 @@ class WorkspaceWidget(QtWidgets.QWidget):
 
         # self.main_text = QtWidgets.QTextEdit(self)
         # self.main_layout.addWidget(self.main_text)
-
+        
         self.table1 = QtWidgets.QTableView(self.tab_widget)
         self.table1.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
         self.table1.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
@@ -31,7 +31,6 @@ class WorkspaceWidget(QtWidgets.QWidget):
         self.main_layout.addWidget(self.table1)
         self.main_layout.addWidget(self.tab_widget)
         self.setLayout(self.main_layout)
-
 
     def kupac_selected(self, index):
         model = self.table1.model()
@@ -74,8 +73,8 @@ class WorkspaceWidget(QtWidgets.QWidget):
         self.tab_widget.removeTab(index)
 
     
-    # def show_text(self, text):
-    #     self.main_text.setText(text)
+    def show_text(self, text):
+        self.main_text.setText(text)
 
     def create_dummy_model(self):
         kupac_model = KupacModel()

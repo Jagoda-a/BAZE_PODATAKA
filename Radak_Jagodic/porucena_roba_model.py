@@ -5,7 +5,6 @@ class PorucenaRobaModel(QtCore.QAbstractTableModel):
         super().__init__(parent)
         self.poruceno = []
         
-
     def get_element(self, index):
         return self.poruceno[index.row()]
 

@@ -15,7 +15,6 @@ class KupacModel(QtCore.QAbstractTableModel):
     def columnCount(self, index):
         return 3
 
-    
     def data(self, index, role = QtCore.Qt.DisplayRole):
         kupac = self.get_element(index)
         if index.column() == 0 and role == QtCore.Qt.DisplayRole:

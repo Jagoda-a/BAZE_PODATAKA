@@ -23,12 +23,12 @@ def read_file(index):
         central_widget.addTab(new_workspace, path.split("/")[-1])
         new_workspace.show_text(text)
 
-#TODO: Proveravaj kod!
+#TODO: 
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     main_window = QtWidgets.QMainWindow()
-    main_window.resize(700, 500)
+    main_window.resize(700, 600)
     # Izgled prozora
     main_window.setWindowTitle("Editor generickih podataka")
     main_window.setStyleSheet("background-color:yellow")
@@ -74,13 +74,12 @@ if __name__ == "__main__":
     tool_bar.addAction(t4, "Wi-fi")
     
 
-
     #WorkspaceWidget
     central_widget = QtWidgets.QTabWidget(main_window)
-    text_edit = QtWidgets.QTextEdit(central_widget)
-    central_widget.addTab(text_edit, QtGui.QIcon("picture/textedit.png"), "Tekstualni editor")
-    # workspace = WorkspaceWidget(central_widget)
-    # central_widget.addTab(workspace,QtGui.QIcon("picture/tabela.png"), "Prikaz tabele")
+    # text_edit = QtWidgets.QTextEdit(central_widget)
+    # central_widget.addTab(text_edit, QtGui.QIcon("picture/textedit.png"), "Tekstualni editor")
+    workspace = WorkspaceWidget(central_widget)
+    central_widget.addTab(workspace,QtGui.QIcon("picture/tabela.png"), "Prikaz tabele")
     central_widget.tabCloseRequested.connect(delete_tab) #Brisanje taba
     
     
