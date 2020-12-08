@@ -8,6 +8,12 @@ from workspace import WorkspaceWidget
 def delete_tab(index):
     central_widget.removeTab(index)
 
+""'Otvaranje fajla Struck docka u terminalu""'
+# def open_file(path):
+#     with open(path) as infile:
+#         txt = infile.read()
+#         print(txt)
+
 ''' Metoda dza ocitavanje fajla structura *Djape file* '''
 def read_file(index):
     path = structure_dock.model.filePath(index)
@@ -81,6 +87,7 @@ if __name__ == "__main__":
     # structure_dock = QtWidgets.QDockWidget("Strukture dokumenata", main_window)
     structure_dock = StructureDock("Strukture dokumenata", main_window)
     structure_dock.tree.clicked.connect(read_file) # *Djape file*
+    # structure_dock.kliknut.connect(open_file)
     
     # Akcija za strukture
     toggle_structure_dock_action = structure_dock.toggleViewAction()

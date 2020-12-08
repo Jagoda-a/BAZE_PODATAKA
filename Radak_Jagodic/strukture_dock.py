@@ -9,7 +9,6 @@ class StructureDock(QtWidgets.QDockWidget):
         self.model = QtWidgets.QFileSystemModel()
         self.model.setRootPath(QtCore.QDir.currentPath())
 
-        
         self.tree = QtWidgets.QTreeView()
         self.tree.setModel(self.model)
         self.tree.setRootIndex(self.model.index(QtCore.QDir.currentPath()))
@@ -20,6 +19,7 @@ class StructureDock(QtWidgets.QDockWidget):
     def file_clicked(self, index):
         print(self.model.filePath(index))
         path = self.model.filePath(index)
+        
         self.kliknut.emit(path)
 
 
