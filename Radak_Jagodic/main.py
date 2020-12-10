@@ -23,7 +23,7 @@ def read_file(index):
         central_widget.addTab(new_workspace, path.split("/")[-1])
         new_workspace.show_text(text)
 
-#TODO: 
+#TODO: Promeni u specifikaciju profesora
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
