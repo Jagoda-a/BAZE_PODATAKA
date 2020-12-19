@@ -48,9 +48,9 @@ class WorkspaceWidget(QtWidgets.QWidget):
         self.subtable2.setModel(nepolozeni_predmeti_model)
 
     def show_tabs(self):
-        self.tab_widget.addTab(self.subtable1, QtGui.QIcon("picture/tabela.png"), "Polozeni predmeti")
+        self.tab_widget.addTab(self.subtable1, QtGui.QIcon("png/tabela.png"), "Polozeni predmeti")
 
-        self.tab_widget.addTab(self.subtable2, QtGui.QIcon("picture/tabela.png"), "Nepolozeni predmeti")
+        self.tab_widget.addTab(self.subtable2, QtGui.QIcon("png/tabela.png"), "Nepolozeni predmeti")
 
     def create_table(self, rows, columns):
         table_widget = QtWidgets.QTableWidget(rows, columns, self)

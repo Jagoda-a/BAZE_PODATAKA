@@ -31,7 +31,7 @@ if __name__ == "__main__":
     main_window.resize(700, 600)
     # Izgled prozora
     main_window.setWindowTitle("Informacioni resursi prodaje")
-    icon = QtGui.QIcon("picture/icons8-edit-file-64.png")
+    icon = QtGui.QIcon("png/icons8-edit-file-64.png")
     main_window.setWindowIcon(icon)
 
     #Meni bar
@@ -43,15 +43,15 @@ if __name__ == "__main__":
     open_menu = QtWidgets.QMenu("Open", menu_bar)
 
     #Icon for menuAction
-    fileIcon = QtGui.QIcon("picture/icons8-edit-file-64.png")
+    fileIcon = QtGui.QIcon("png/icons8-edit-file-64.png")
     file_menu.addAction(fileIcon, "New file") # Akcija menija
-    fileIcon = QtGui.QIcon("picture/print.png")
+    fileIcon = QtGui.QIcon("png/print.png")
     file_menu.addAction(fileIcon, "Print") # Akcija menija
     file_menu.setToolTip("Open")
-    editIcon = QtGui.QIcon("picture/textedit.png")
+    editIcon = QtGui.QIcon("png/textedit.png")
     edit_menu.addAction(editIcon, "Settings")# Akcija menija
     edit_menu.setToolTip("Open")
-    viewIcon = QtGui.QIcon("picture/diplay.png")
+    viewIcon = QtGui.QIcon("png/diplay.png")
     view_menu.addAction(viewIcon, "Window") # Akcija menija
 
 
@@ -63,13 +63,13 @@ if __name__ == "__main__":
 
     #ToolBar
     tool_bar = QtWidgets.QToolBar(main_window)
-    t1 = QtGui.QIcon("picture/diplay.png")
+    t1 = QtGui.QIcon("png/diplay.png")
     tool_bar.addAction(t1, "Display")
-    t2 = QtGui.QIcon("picture/poruka.png")
+    t2 = QtGui.QIcon("png/poruka.png")
     tool_bar.addAction(t2, "Inbox")
-    t3 = QtGui.QIcon("picture/telefon.png")
+    t3 = QtGui.QIcon("png/telefon.png")
     tool_bar.addAction(t3, "Call")
-    t4 = QtGui.QIcon("picture/wifi.png")
+    t4 = QtGui.QIcon("png/wifi.png")
     tool_bar.addAction(t4, "Wi-fi")
     
 
@@ -78,7 +78,7 @@ if __name__ == "__main__":
     # text_edit = QtWidgets.QTextEdit(central_widget)
     # central_widget.addTab(text_edit, QtGui.QIcon("picture/textedit.png"), "Tekstualni editor")
     workspace = WorkspaceWidget(central_widget)
-    central_widget.addTab(workspace,QtGui.QIcon("picture/tabela.png"), "Prikaz tabele")
+    central_widget.addTab(workspace,QtGui.QIcon("png/tabela.png"), "Prikaz tabele")
     central_widget.tabCloseRequested.connect(delete_tab) #Brisanje taba
     
     
@@ -107,5 +107,4 @@ if __name__ == "__main__":
 
     # Kraj
     main_window.show()
-    # menu_bar.setParent(main_window)
     sys.exit(app.exec_())
