@@ -29,7 +29,7 @@ with open("student_data.csv", 'r', newline="") as infile:
 
 with open("student_metada.json", 'w') as metafile:
     metadata = {}
-    metadata['columns_nums'] = ["Nroj indeksa", "Ime i prezime"]
+    metadata['columns_nums'] = ["Broj indeksa", "Ime i prezime"]
     metadata['delimiter'] = ","
     json.dump(metadata, metafile)
 
@@ -39,6 +39,7 @@ with open("studen_metadata.json", 'r') as metafile:
 
 
 newstudents = []
+
 for s in newdata:
     print(s)
     newstudents.append(Student(s[0], s[1]))

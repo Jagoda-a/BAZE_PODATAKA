@@ -1,1 +1,124 @@
-{"columns":["broj_indeksa", "ime_prezime"], "colum_names":["Broj indeksa", "Ime i prezime"], "delimiter":","}
+{
+    "student": [
+        {
+            "broj_indeksa": 2019270487,
+            "ime_prezime": "Predrag Radak",
+            "polozeni_predmeti": [
+                {
+                    "naziv": "OOP1",
+                    "ocena": 7
+                },
+                {
+                    "naziv": "OOP2",
+                    "ocena": 6
+                }
+            ],
+            "nepolozeni_predmeti": [
+                {
+                    "naziv": "SIMS",
+                    "broj_polaganja": 4
+                },
+                {
+                    "naziv": "AR",
+                    "broj_polaganja": 5
+                }
+            ]
+        },
+        {
+            "broj_indeksa": 2019270000,
+            "ime_prezime": "Nikola Nikolic",
+            "polozeni_predmeti": [
+                {
+                    "naziv": "OOP2",
+                    "ocena": 7
+                },
+                {
+                    "naziv": "AR",
+                    "ocena": 6
+                }
+            ],
+            "nepolozeni_predmeti": [
+                {
+                    "naziv": "Engleski 1",
+                    "broj_polaganja": 4
+                },
+                {
+                    "naziv": "OOP2",
+                    "broj_polaganja": 5
+                }
+            ]
+        },
+        {
+            "broj_indeksa": 2019270111,
+            "ime_prezime": "Ivan Ivic",
+            "polozeni_predmeti": [
+                {
+                    "naziv": "SIMS",
+                    "ocena": 7
+                },
+                {
+                    "naziv": "WEB Dizajn",
+                    "ocena": 6
+                }
+            ],
+            "nepolozeni_predmeti": [
+                {
+                    "naziv": "OP",
+                    "broj_polaganja": 4
+                },
+                {
+                    "naziv": "BP",
+                    "broj_polaganja": 5
+                }
+            ]
+        },
+        {
+            "broj_indeksa": 2019270222,
+            "ime_prezime": "Marko Maric",
+            "polozeni_predmeti": [
+                {
+                    "naziv": "SPA",
+                    "ocena": 7
+                },
+                {
+                    "naziv": "Matematika",
+                    "ocena": 6
+                }
+            ],
+            "nepolozeni_predmeti": [
+                {
+                    "naziv": "Veb Programiranje",
+                    "broj_polaganja": 4
+                },
+                {
+                    "naziv": "AR",
+                    "broj_polaganja": 5
+                }
+            ]
+        },
+        {
+            "broj_indeksa": 2019270333,
+            "ime_prezime": "Janko Janic",
+            "polozeni_predmeti": [
+                {
+                    "naziv": "BP",
+                    "ocena": 7
+                },
+                {
+                    "naziv": "OOP2",
+                    "ocena": 6
+                }
+            ],
+            "nepolozeni_predmeti": [
+                {
+                    "naziv": "Engleski 2",
+                    "broj_polaganja": 4
+                },
+                {
+                    "naziv": "AR",
+                    "broj_polaganja": 5
+                }
+            ]
+        }
+    ]
+}
